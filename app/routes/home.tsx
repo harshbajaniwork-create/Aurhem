@@ -1,4 +1,6 @@
+import PageBanner from "~/components/PageBanner";
 import type { Route } from "./+types/home";
+import { HomeView } from "~/modules/home/ui/views/home-view";
 
 export function meta({}: Route.MetaArgs) {
   return [{ title: "Aurhem" }, { name: "description", content: "Aurhem" }];
@@ -6,11 +8,8 @@ export function meta({}: Route.MetaArgs) {
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="text-primary">aurhem</h1>
-      <p className="text-secondary">aurhem</p>
-      <p className="text-tertiary">aurhem</p>
-      <p className="text-quaternary">aurhem</p>
-    </div>
+    <main>
+      <HomeView />
+    </main>
   );
 }
