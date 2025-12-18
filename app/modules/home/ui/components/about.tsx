@@ -1,19 +1,7 @@
 import { Link } from "react-router";
 import { Button } from "~/components/ui/button";
-import {
-  Building,
-  Landmark,
-  Zap,
-  Waves,
-  Network,
-  Factory,
-  Ship,
-  Smartphone,
-  Droplets,
-  Hospital,
-  Hotel,
-  Globe,
-} from "lucide-react";
+import { Landmark, Zap, Waves, Network } from "lucide-react";
+import { InfrastructureGallery } from "./infrastructure-gallery";
 
 export const services = [
   {
@@ -40,17 +28,6 @@ export const services = [
       "Renewable and conventional power generation, transmission, and storage accelerating the transition to sustainable energy systems.",
     icon: <Zap className="w-8 h-8" />,
   },
-];
-
-const infrastructureHighlights = [
-  { icon: <Ship className="w-5 h-5" />, label: "Ports & Logistics" },
-  { icon: <Factory className="w-5 h-5" />, label: "Industrial Parks & SEZs" },
-  { icon: <Building className="w-5 h-5" />, label: "Townships & Real Estate" },
-  { icon: <Hospital className="w-5 h-5" />, label: "Healthcare Facilities" },
-  { icon: <Hotel className="w-5 h-5" />, label: "Hospitality" },
-  { icon: <Smartphone className="w-5 h-5" />, label: "Rural Digital Access" },
-  { icon: <Droplets className="w-5 h-5" />, label: "Water Infrastructure" },
-  { icon: <Globe className="w-5 h-5" />, label: "Mass Transit & Smart Cities" },
 ];
 
 export const About = () => {
@@ -148,24 +125,7 @@ export const About = () => {
           </div>
 
           {/* Infrastructure Highlights */}
-          <div className="bg-plum/5 p-8 rounded-2xl border border-plum/10">
-            <h3 className="text-2xl font-bold text-plum text-center mb-6">
-              Infrastructure in Action
-            </h3>
-            <div className="flex flex-wrap justify-center gap-4">
-              {infrastructureHighlights.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center gap-2 bg-white/70 px-4 py-2 rounded-full border border-dusty-rose/30"
-                >
-                  <span className="text-dusty-rose">{item.icon}</span>
-                  <span className="text-sm font-medium text-[#4A3A4A]">
-                    {item.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <InfrastructureGallery />
         </div>
       </section>
     </main>
