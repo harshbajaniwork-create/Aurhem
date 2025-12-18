@@ -8,6 +8,10 @@ export const Navlinks = [
     href: "/about",
   },
   {
+    name: "Services",
+    href: "/services",
+  },
+  {
     name: "Our Initiatives",
     href: "/our-initiatives",
   },
@@ -25,6 +29,10 @@ export const FooterQuickLinks = [
   {
     name: "About",
     href: "/about",
+  },
+  {
+    name: "Services",
+    href: "/services",
   },
   {
     name: "Our Initiatives",
